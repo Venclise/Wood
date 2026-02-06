@@ -98,7 +98,7 @@ images.forEach((img) => {
       }
       
       
-      toast.success("Product has been added successfully!");
+      toast.success("Product has been add successfully!");
    
 
     

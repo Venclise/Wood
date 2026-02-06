@@ -28,8 +28,10 @@ const token = c.get("token")?.value;
 }
 
 
-export  async function DELETE(  req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }) {
+export async function DELETE(
+  req: Request,
+  
+) {
     try{
    await connectDB()
    const c = await cookies()

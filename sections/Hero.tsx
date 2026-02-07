@@ -22,10 +22,10 @@ export default function Hero() {
     <div className='p-2 gap-1  h-screen w-full transition-all flex flex-col items-center justify-center overflow-hidden   '>
 
 <h1 className='text-[#915745] text-7xl lg:text-9xl font-bold'>
-   New {" "}
-   <span className='text-[#572f23] font-sans'>
+   New 
+ 
     in.
-   </span>
+
 </h1>
 
 <BounceCards

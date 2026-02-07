@@ -35,7 +35,7 @@ export default  function RecommendProducts({data}:{data:[]}) {
 data.length && data.length > 0 &&
         <h2 className=' text-lg py-5 w-full text-center'>You may also like</h2>
       }
-      <div className='flex items-center  w-full p-2 md:p-5 lg:p-10 gap-4 mt-12 lg:mt-0 relative'>
+      <div className='flex items-center justify-around  w-full p-2 md:p-5 lg:p-10 gap-4 mt-12 lg:mt-0 relative'>
 <Swiper
  
           modules={[A11y]}
@@ -46,11 +46,11 @@ data.length && data.length > 0 &&
   breakpoints={{
             0: { slidesPerView: 2 },
             640: { slidesPerView: 3 },
-            1024: { slidesPerView: 4 },
+            1024: { slidesPerView: 5   },
           }}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-  className='w-full h-[80vh] lg:h-screen'
+  className='w-full h-screen'
 >
   
 

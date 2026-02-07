@@ -10,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import Loading from "@/app/products/loading";
 
 export default function ProductsClient() {
   const searchParams = useSearchParams();
@@ -20,29 +21,35 @@ export default function ProductsClient() {
 
   const [products, setProducts] = useState<any[]>([]);
  
+ 
+  
 
+  
   useEffect(() => {
     async function fetchProducts() {
+      
     
-
+      
       const params = new URLSearchParams();
-
+      
+      
       if (sort) params.set("sort", sort);
       if (sale) params.set("sale", "true");
-
+      
       const url = `/api/products${
         params.toString() ? `?${params.toString()}` : ""
       }`;
 
       const res = await fetch(url, { cache: "no-store" });
       const data = await res.json();
-
+      
       setProducts(data);
-   
+  
     }
 
     fetchProducts();
   }, [sort, sale]); 
+
 
 
 

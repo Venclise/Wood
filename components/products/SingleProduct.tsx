@@ -123,10 +123,10 @@ export default  function SingleProduct({ product }: { product: Product }) {
 
 
         
-<div className="flex items-center justify-center gap-4 flex-col p-5 flex-1  ">
+<div className="flex  justify-center gap-1 flex-col p-5 flex-1  ">
    
 
-        <h2 className="text-5xl md:text-3xl lg:text-6xl text-center ">
+        <h2 className="text-3xl lg:text-5xl font-light   ">
           {product.title}
         </h2>
     
@@ -135,7 +135,7 @@ export default  function SingleProduct({ product }: { product: Product }) {
           Rs.{product.price.toLocaleString()}
         </p>
 
-         <p>{product.subcategory}</p> 
+     
        
         {
  product.cutprice > product.price && (
@@ -168,10 +168,10 @@ export default  function SingleProduct({ product }: { product: Product }) {
 
           <Button
             variant="default" 
-            className="px-9 py-5 w-full text-md text-white bg-[#915745] cursor-pointer hover:bg-[#784333]  rounded-xs  "
+            className="px-9 py-5 w-full text-sm text-white bg-[#915745] cursor-pointer hover:bg-[#784333]  rounded-xs  "
             onClick={() => {addToCart({
               id: product._id,
-              title: product.title,
+              title: product.title, 
               price: product.price,
               img: product.image[0]
             }), toast.success("Successfully added to cart") }}
@@ -180,7 +180,7 @@ export default  function SingleProduct({ product }: { product: Product }) {
           </Button>
                <Button
              variant="outline"
-                    className="px-9 flex items-center py-5 rounded-xs w-full   text-black   font-mono cursor-pointer  "
+                    className="px-9 text-sm flex items-center py-5 rounded-xs w-full   text-black   font-mono cursor-pointer  "
             > 
             <MessageCircle />
             Ask a Question on whatsapp

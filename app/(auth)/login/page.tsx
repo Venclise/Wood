@@ -1,6 +1,7 @@
-import { GalleryVerticalEnd } from "lucide-react"
 
-import { SignupForm } from "@/components/signup-form"
+export const dynamic = "force-dynamic";
+
+
 import { LoignForm } from "@/components/loginform"
 
 export default function LoginPage() {
